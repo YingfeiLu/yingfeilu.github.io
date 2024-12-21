@@ -3,6 +3,14 @@ layout: home
 title: "Home"
 ---
 
-This theme allows an academic person to showcase their research interests, publications, research group, curriculum vitae, any courses that they may be teaching, or anything else they may want to put out into the world.
+My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a second-year PhD student in the Department of Translation and Language Sciences at Universitat Pompeu Fabra, under the supervision of Dr. Elisenda Bernal and Dr. Alba Milà-Garcia.
 
-Academics can use this home page to describe their research interests, display their latest publications, or provide an introduction to their research group.
+I am passionate about languages. I am a native speaker of both Cantonese and Mandarin Chinese, and I hold advanced proficiency in English and Spanish. As a dedicated language learner, I am an avid Super Duolingo user, focusing on German, and I am currently striving to master Catalan through the university’s language center.
+
+My research interests center on morphology, neology, and lexicography. More specifically, I am passionate about studying word elements (combining forms and affixes), transitional morphology, and comparative linguistics in English and Spanish. My current research focuses on distinguishing between affixes and combining forms in both languages, using the framework of Transitional Morphology (Mattiello, 2023), with the goal of contributing to and advancing this theoretical model.
+
+Outside of academia, I enjoy traveling, as it allows me to explore new perspectives and cultures. I am also a music enthusiast, with a love for both pop and classical music. I hold an annual pass to L’Auditori in Barcelona, where I regularly attend performances by the Barcelona Symphony Orchestra.
+
+In my younger years, I was both a fencing athlete and a cello player.
+
+My motto, Per aspera ad astra ("Through hardships to the stars"), resonates deeply with me, and I often reflect on its Mandarin Chinese translation: 彼此苦旅，以觅繁星 ("Together through life’s struggles, seeking the stars"). This inspires me to persevere in all aspects of life and research.
