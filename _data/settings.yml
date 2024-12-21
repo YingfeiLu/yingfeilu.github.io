@@ -16,4 +16,4 @@ social:
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/yingfei-lu-509a1a217/'}
 
 contacts:
-- {name: 'Yingfei Lu', title: '~', department: 'Translation and Language Sciences', institution: 'Universitat Pompeu Fabra', institution_address: 'Roc Boronat, 138, 08018 Barcelona', email: 'yingfei.lu', office: '53.304', image: 'assets/img/contact.jpg'}
+- {name: 'Yingfei Lu', department: ' Department of Translation and Language Sciences', institution: 'Universitat Pompeu Fabra', institution_address: 'Roc Boronat, 138, 08018 Barcelona', email: 'yingfei.lu', office: '53.304', image: 'assets/img/contact.jpg'}
