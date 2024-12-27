@@ -1,6 +1,13 @@
 <div class="row g-5 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-5">About my research</h3>
+      <p>This is a detailed description of my research. I focus on transitional morphology and lexicographic perspectives to analyze shared word elements in English and Spanish.</p>
+    <p>The main objectives include:</p>
+    <ul>
+      <li>Understanding morphological patterns in word formation</li>
+      <li>Evaluating semantic stability across languages</li>
+      <li>Exploring lexicographic representation in digital dictionaries</li>
+    </ul>
     {% if page.title == "Home" %}
       {% for item in site.data.publications.featured %}
         <p><a href="{{ item.url }}">{{ item.name }}</a></p>
