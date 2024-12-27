@@ -1,4 +1,4 @@
 ---
 layout: conferences
-title: "Conferences"
+title: "conferences"
 ---
