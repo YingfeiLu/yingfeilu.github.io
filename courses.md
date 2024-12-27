@@ -1,4 +1,4 @@
 ---
-layout: conferences
-title: "conferences"
+layout: courses
+title: "courses"
 ---
