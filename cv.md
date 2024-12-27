@@ -2,4 +2,4 @@
 layout: cv
 title: "CV"
 ---
-description: 'Thanks for finding me! Here is my CV!'
+Thanks for finding me! Here is my CV! [My CV](https://yingfeilu.github.io/cv_1.pdf)
