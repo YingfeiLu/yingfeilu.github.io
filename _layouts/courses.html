@@ -1,16 +1,14 @@
+---
+layout: default
+---
+
+{{ content }}
+
 <div class="row g-5 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-5">Conferences</h3>
-    <p>
-      Welcome to the Conferences section. Here you will find information about the various conferences I have participated in or plan to attend. Below is an overview of some key events:
-    </p>
-    <ul>
-      <li><strong>Conference 1:</strong> Description of the first conference, its theme, and your role.</li>
-      <li><strong>Conference 2:</strong> Details about the second conference, including location and participants.</li>
-      <li><strong>Conference 3:</strong> Brief description of another conference you are interested in or have attended.</li>
-    </ul>
-    <p>
-      Feel free to reach out for more details or collaboration opportunities!
-    </p>
+    {% for course in site.data.settings.courses %}
+      <p><a href="{{ site.github.url }}/courses/{{ course.url}}">{{ course.name }}</a></p>
+    {% endfor %}
   </div>
 </div>
