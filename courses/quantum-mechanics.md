@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Quantum Mechanics"
+title: "Poster presentation at XX Encuentro Morfólogos"
 ---
 
 #### Course Information
