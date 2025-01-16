@@ -3,7 +3,11 @@ layout: home
 title: "Home"
 ---
 
-My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a second-year PhD student in the Department of Translation and Language Sciences at Universitat Pompeu Fabra, under the supervision of Dr. Elisenda Bernal and Dr. Alba Milà-Garcia.
+My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a second-year PhD student in the Department of Translation and Language Sciences at Universitat Pompeu Fabra, under the supervision of 
+  <a href="https://www.upf.edu/web/elisenda-bernal" target="_blank">Dr. Elisenda Bernal</a> 
+  and 
+  <a href="https://www.upf.edu/web/alba-mila" target="_blank">Dr. Alba Milà-Garcia</a>.
+</p>
 
 I am passionate about languages. I am a native speaker of both Cantonese and Mandarin Chinese, and I hold advanced proficiency in English and Spanish. As a dedicated language learner, I am an avid Super Duolingo user, focusing on German, and I am currently striving to master Catalan through the university’s language center.
 
