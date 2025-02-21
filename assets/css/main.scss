@@ -19,7 +19,7 @@ body a {
 .gallery-img {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 500px;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -28,7 +28,7 @@ body a {
 }
 .gallery-card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 500px;
     margin: 0.5rem;
 }
 .gallery-row {
