@@ -3,6 +3,8 @@ menu:
 - {name: 'conferences', url: '/conferences'}
 - {name: 'cv', url: '/cv'}
 - {name: 'contact', url: '/contact'}
+- {name: 'gallery', url: '/gallery'}
+
 
 social:
 - {icon: 'github', link: 'https://yingfeilu.github.io/'}
