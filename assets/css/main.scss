@@ -17,37 +17,30 @@ body a {
 }
 
 .gallery-img {
-            object-fit: contain;
-            width: 100%;
-            height: 200px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 .gallery-img:hover {
-            transform: scale(1.05);
-        }
+    transform: scale(1.05);
+}
 .gallery-card {
-            flex: 0 0 auto; /* Prevents cards from stretching */
-            width: 400px; /* Fixed width for consistency */
-            margin: 0.5rem; /* Adds spacing between cards */
-        }
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0.5rem;
+}
 .gallery-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start; /* Distributes from left to right */
-            gap: 1rem; /* Consistent spacing between items */
-        }
-.modal-img {
-            width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-
-/* Overlay styles */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
 .overlay {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%; /* Start off-screen */
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -57,22 +50,44 @@ body a {
     z-index: 1000;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: left 0.5s ease, opacity 0.3s ease;
 }
 .overlay:target {
     visibility: visible;
     opacity: 1;
+    left: 0;
 }
 .overlay-img {
     max-width: 90%;
     max-height: 90vh;
     object-fit: contain;
 }
-.close-btn {
+
+/* Fixed close button positioning */
+.btn-close {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: white;
+    z-index: 1001;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white !important; /* Ensure arrows are white */
     font-size: 2rem;
     text-decoration: none;
+    padding: 10px;
+    z-index: 1001;
+}
+.nav-arrow:hover {
+    color: #ccc !important; /* Lighter shade on hover */
+}
+.prev-arrow {
+    left: 20px;
+}
+.next-arrow {
+    right: 20px;
 }
