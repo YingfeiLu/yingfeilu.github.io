@@ -7,6 +7,8 @@ $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-seri
 $headingFont: Caveat,Georgia,serif;
 $linkColor: #212529 !important;
 
+/* [Previous variable definitions remain unchanged] */
+
 body {
   background: $backgroundColor;
   color: $bodyColor;
@@ -29,9 +31,9 @@ h3 {
 
 /* Gallery Styles */
 .gallery-img {
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain */
     width: 100%;
-    height: 500px;
+    max-height: 500px; /* Changed from fixed height to max-height */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
@@ -47,7 +49,7 @@ h3 {
 }
 .gallery-item {
     display: flex;
-    flex-direction: row; /* Default to row for manual ordering */
+    flex-direction: row;
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -65,20 +67,19 @@ h3 {
     padding: 2rem;
 }
 .gallery-image.left {
-    order: 1; /* Image first */
+    order: 1;
 }
 .gallery-text.right {
-    order: 2; /* Text second */
+    order: 2;
 }
 .gallery-text.left {
-    order: 1; /* Text first */
+    order: 1;
 }
 .gallery-image.right {
-    order: 2; /* Image second */
+    order: 2;
 }
 .card-title {
     font-size: 2.2rem;
-/*    font-weight: 600;*/
     margin-bottom: 1rem;
     color: #333;
 }
@@ -88,7 +89,26 @@ h3 {
     color: #666;
 }
 
-/* Overlay Styles */
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-direction: column; /* Stack items vertically on mobile */
+        padding: 1rem;
+    }
+    .gallery-image, .gallery-text {
+        flex: 0 0 100%; /* Full width on mobile */
+        padding: 1rem;
+        order: unset; /* Reset order for natural flow */
+    }
+    .gallery-img {
+        max-height: 300px; /* Smaller max height on mobile */
+    }
+    .gallery-text {
+        padding-top: 0; /* Remove extra top padding after image */
+    }
+}
+
+/* Overlay Styles remain unchanged */
 .overlay {
     position: fixed;
     top: 0;
