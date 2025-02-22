@@ -10,7 +10,10 @@ social:
 - {icon: 'github', link: 'https://yingfeilu.github.io/'}
 - {icon: 'twitter', link: 'https://x.com/luyingfeii?s=21&t=IgtHhQpXhVdnV2Q0Zx-jGA'}
 - {icon: 'instagram', link: 'https://www.instagram.com/luyingfeii/profilecard/?igsh=ejBvazllbTU0c2M5'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/yingfei-lu-509a1a217/'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/yingfei-lu-509a1a217'}
+- {icon: 'orcid', link: 'https://orcid.org/0009-0007-2329-432X'}
+- {icon: 'researchgate', link: 'https://www.researchgate.net/profile/Yingfei-Lu'}
+
 
 contacts:
 - {name: 'Yingfei Lu', position: 'Predoctoral researcher', department: ' Department of Translation and Language Sciences', institution: 'Universitat Pompeu Fabra', institution_address: 'Roc Boronat, 138, 08018 Barcelona', email: '[firstname].[surname]@upf.edu', office: '53.304', image: 'assets/img/contact.jpg'}

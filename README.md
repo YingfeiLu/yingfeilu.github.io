@@ -11,4 +11,4 @@ This is my website based on Jekyll.
 [ ] Redesign CV page
     [ ]  didn't want to rub the year in but put it in right aligned, like in the PDF CV
     [ ] when describing the advisors, thesis title etc, i wanna make them into a better looking way
-[ ] Add ORCID in /publications
+[X] Add ORCID in footer
