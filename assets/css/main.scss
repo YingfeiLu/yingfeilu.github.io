@@ -4,6 +4,7 @@
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$headingFont: Caveat,Georgia,serif;
 $linkColor: #212529 !important;
 
 body {
@@ -14,6 +15,16 @@ body {
 
 body a {
   color: $linkColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 2.2rem;
 }
 
 /* Gallery Styles */
@@ -66,8 +77,8 @@ body a {
     order: 2; /* Image second */
 }
 .card-title {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+/*    font-weight: 600;*/
     margin-bottom: 1rem;
     color: #333;
 }
