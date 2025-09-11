@@ -4,7 +4,7 @@ title: "Home"
 ---
 
 <p>
-  My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a second-year PhD student in the 
+  My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a third-year PhD student in the 
   <a href="https://www.upf.edu/web/traduccio" target="_blank">Department of Translation and Language Sciences</a> 
   at 
   <a href="https://www.upf.edu/" target="_blank">Universitat Pompeu Fabra</a>, under the supervision of 
