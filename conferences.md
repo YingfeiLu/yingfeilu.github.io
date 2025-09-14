@@ -2,7 +2,7 @@
 layout: conferences
 title: "conferences"
 ---
- <a href="[(https://www.upjs.sk/filozoficka-fakulta/pracoviska/katedra-anglistiky-a-amerikanistiky/word-formation-theories-vii-typology-and-universals-in-word-formation-vi/)]" target="_blank"><em>Word-Formation Theories VII & Typology and Universals in Word-Formation VI. </em></a> Pavol Jozef Šafárik University, Košice, Slovakia. Jun 25-28, 2025. Paper presentation:Word Element Hyper– in English neologisms: Transitional directionality between derivation and compounding.
+ <a href="[(https://www.upjs.sk/filozoficka-fakulta/pracoviska/katedra-anglistiky-a-amerikanistiky/word-formation-theories-vii-typology-and-universals-in-word-formation-vi/)]" target="_blank"><em>Word-Formation Theories VII & Typology and Universals in Word-Formation VI. </em></a> Pavol Jozef Šafárik University, Košice, Slovakia. Jun 25-28, 2025. Paper presentation: Word Element Hyper– in English neologisms: Transitional directionality between derivation and compounding.
 </br>
 <a href="[https://sites.google.com/view/cietal2025/event-information]" target="_blank"><em>International Congress on Theoretical and Applied Lexical Studies. </em></a> Universidad Complutense de Madrid, Madrid, Spain. May 12-14, 2025. Paper presentation: Neology in English and Spanish. Lexicological characteristics and lexicographic representation.
 </br>
