@@ -11,5 +11,5 @@ This is my website based on Jekyll.
 - [X] Add ORCID and Researchgate in footer
 - [ ] Add a automatically sliding images in the homepage. [Inspiration.](https://xiaotong-xi.github.io/xiaotongxi/)
 - [ ] Redesign CV page
-    - [ ] Didn't want to rub the year in but put it in right aligned, like in the PDF CV
+    - [X] Didn't want to rub the year in but put it in right aligned, like in the PDF CV
     - [ ] When describing the advisors, thesis title etc, i wanna make them into a better looking way
