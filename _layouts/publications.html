@@ -2,5 +2,11 @@
 layout: default
 ---
 
-{{content }}
+<header class="page-header">
+  <p class="eyebrow">Research</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-header__intro">Morphology, neology, and lexicography across English and Spanish.</p>
+  {% if content != empty %}<div class="page-header__intro">{{ content }}</div>{% endif %}
+  <div class="page-header__rule" aria-hidden="true"></div>
+</header>
 {% include publications.html %}

@@ -2,23 +2,43 @@
 layout: default
 ---
 
-<div class="row g-5 mb-5">
-  <div class="col-md-6">
-    <h3 class="">About me</h3>
-    {{ content }}
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="home-hero__copy">
+    <p class="eyebrow">Linguist · Researcher · Language learner</p>
+    <h1 id="home-title">Yingfei Lu <span class="home-hero__chinese chinese-text" lang="zh">{{ site.chintitle }}</span></h1>
+    <p class="home-hero__lead">{{ page.hero_lead }}</p>
+    <p class="home-hero__affiliation">{{ page.hero_affiliation }}</p>
+    <div class="button-row">
+      <a class="button" href="{{ '/cv' | relative_url }}">View my CV</a>
+      <a class="button button--secondary" href="{{ '/contact' | relative_url }}">Get in touch</a>
+    </div>
   </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/assets/img/home.jpg" alt="Home" width="100%">
+  <div class="home-hero__portrait">
+    <img src="{{ '/assets/img/home.jpg' | relative_url }}" alt="Portrait of Yingfei Lu" width="1536" height="2048" fetchpriority="high">
   </div>
-</div>
+</section>
+
+<section class="home-section home-section--about" aria-labelledby="about-heading">
+  <div class="section-heading">
+    <h2 id="about-heading">A little about me</h2>
+    <p>Languages, places, music, and the experiences that shape how I approach research.</p>
+  </div>
+  {{ content }}
+</section>
 
 {% include publications.html %}
 
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class=" border-bottom pb-3 mb-5">Updates</h3>
+<section class="home-section home-section--updates" aria-labelledby="updates-heading">
+  <div class="section-heading">
+    <h2 id="updates-heading">Recent updates</h2>
+    <p>Conferences, presentations, fellowships, and milestones from my doctoral journey.</p>
+  </div>
+  <div class="updates-grid">
     {% for post in site.posts %}
-      <p><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %-d, %Y" }}</p>
+      <a class="update-card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <h3>{{ post.title }}</h3>
+      </a>
     {% endfor %}
   </div>
-</div>
+</section>

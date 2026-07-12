@@ -2,19 +2,19 @@
 layout: default
 ---
 
-{{ content }}
-
-<h3 class=" border-bottom pb-3 mb-5">People</h3>
+<header class="page-header">
+  <p class="eyebrow">Research group</p>
+  <h1>{{ page.title | default: "People" }}</h1>
+  <div class="page-header__intro">{{ content }}</div>
+  <div class="page-header__rule" aria-hidden="true"></div>
+</header>
+<div class="bio-grid">
 {% for person in site.data.settings.people %}
-<div class="row g-5 mb-5">
-  <div class="col-md-6">
-    <h5>{{ person.name }}</h5>
+<article class="bio-card">
+    <h2>{{ person.name }}</h2>
     <p>Email: {{ person.email }}</p>
     <p>Phone: {{ person.phone }}</p>
-    <p><a href="{{ site.github.url }}/people/{{ person.url }}">More info</a></p>
-  </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/{{ person.image }}" alt="Contact" width="100%">
-  </div>
-</div>
+    <p><a href="{{ '/people/' | append: person.url | relative_url }}">More info</a></p>
+</article>
 {% endfor %}
+</div>

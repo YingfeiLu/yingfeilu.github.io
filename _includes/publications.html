@@ -1,25 +1,15 @@
-<div class="row g-5 mb-5"> 
-  <div>
-    <h3 class=" border-bottom pb-3 mb-5">About my research</h3>
+<section class="{% if page.title == 'Home' %}home-section {% endif %}research-overview" aria-labelledby="research-heading">
+  <div class="research-overview__heading">
+    <p class="eyebrow">Research</p>
+    <h2 id="research-heading">How words move and change</h2>
+  </div>
+  <div class="research-overview__content">
     <p>My research interests center on morphology, neology, and lexicography. More specifically, I am passionate about studying word elements (combining forms and affixes), transitional morphology, and comparative linguistics in English and Spanish. My current research focuses on distinguishing between affixes and combining forms in both languages, using the framework of Transitional Morphology (Mattiello, 2023), with the goal of contributing to and advancing this theoretical model.</p>
-    <p>The main objectives include:</p>
-    <ul>
+    <h3>Research objectives</h3>
+    <ol class="research-objectives">
       <li>Understanding morphological patterns in word formation</li>
       <li>Evaluating semantic stability across languages</li>
       <li>Exploring lexicographic representation in digital dictionaries</li>
-    </ul>
-    <div style="height: 15px;"></div> <!-- This adds blank space -->
+    </ol>
   </div>
-  {% if page.title == "Home" %}
-  <!--
-  {% for item in site.data.publications.featured %}
-    <p><a href="{{ item.url }}">{{ item.name }}</a></p>
-  {% endfor %}
-  -->
-{% else %}
-  <!--
-  {% for item in site.data.publications.index %}
-    <p><a href="{{ item.url }}">{{ item.name }}</a></p>
-  {% endfor %}
-  -->
-{% endif %}
+</section>
