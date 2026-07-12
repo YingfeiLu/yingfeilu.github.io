@@ -1,15 +1,22 @@
-<header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-5 border-bottom">
-  <div>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <h1 class="fs-4 fw-bold">{{ site.title }} <span class="chinese-text">{{ site.chintitle }}</span></h1>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="{{ '/' | relative_url }}" class="site-brand" aria-label="{{ site.title }}, home">
+      <span class="site-brand__name">{{ site.title }}</span>
+      <span class="site-brand__chinese chinese-text" lang="zh">{{ site.chintitle }}</span>
     </a>
-    <a href="{{ site.github.url }}/" class="d-flex align-items-center text-decoration-none">
-      <span>{{ site.description }}</span>
-    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+      {% for item in site.data.settings.menu %}
+        {% assign current_url = page.url | remove: '.html' | remove_last: '/' %}
+        <a class="site-nav__link{% if current_url == item.url %} is-active{% endif %}"
+           {% if current_url == item.url %}aria-current="page"{% endif %}
+           href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
   </div>
-  <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-    {% for item in site.data.settings.menu %}
-      <a class="me-3 py-2 text-decoration-none" href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a>
-    {% endfor %}
-  </nav>
 </header>

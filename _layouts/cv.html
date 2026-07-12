@@ -2,43 +2,50 @@
 layout: default
 ---
 
-{{ content }}
+<header class="page-header">
+  <p class="eyebrow">Curriculum vitae</p>
+  <h1>Experience &amp; education</h1>
+  <div class="page-header__intro">{{ content }}</div>
+  <div class="page-header__rule" aria-hidden="true"></div>
+</header>
 
-<div class="row g-5 mb-5">
-  <div>
-    <h3 class=" border-bottom pb-3 mb-5">CV</h3>
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Education</h4>
-      </div>
-      <div class="col-md-10">
+<div class="cv-sections">
+  <section class="cv-section" aria-labelledby="education-heading">
+    <div class="cv-section__heading"><h2 id="education-heading">Education</h2></div>
+    <div class="cv-list">
         {% for section in site.data.cv.education %}
-          <p class="fw-bold">{{ section.title }}</p>
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
           <p>{{ section.description }}</p>
+        </article>
         {% endfor %}
-      </div>
     </div>
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>Academic Experience</h4>
-      </div>
-      <div class="col-md-10">
+  </section>
+
+  <section class="cv-section" aria-labelledby="academic-heading">
+    <div class="cv-section__heading"><h2 id="academic-heading">Academic experience</h2></div>
+    <div class="cv-list">
         {% for section in site.data.cv.academic-experience %}
-          <p class="fw-bold">{{ section.title }}</p>
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
           <p>{{ section.description }}</p>
+        </article>
         {% endfor %}
-          </div>
     </div>
-    <div class="row g-5 mb-5">
-      <div class="col-md-2">
-        <h4>UNESCO Experience</h4>
-      </div>
-      <div class="col-md-10">
+  </section>
+
+  <section class="cv-section" aria-labelledby="unesco-heading">
+    <div class="cv-section__heading"><h2 id="unesco-heading">UNESCO experience</h2></div>
+    <div class="cv-list">
         {% for section in site.data.cv.unesco-experience %}
-          <p class="fw-bold">{{ section.title }}</p>
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
           <p>{{ section.description }}</p>
+        </article>
         {% endfor %}
-      </div>
     </div>
-  </div>
+  </section>
 </div>

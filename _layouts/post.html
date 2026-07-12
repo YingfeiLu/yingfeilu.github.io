@@ -2,9 +2,15 @@
 layout: default
 ---
 
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class=" border-bottom pb-3 mb-5">{{ page.title }}</h3>
+<article>
+  <header class="page-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <div class="page-header__rule" aria-hidden="true"></div>
+  </header>
+  <div class="post-body">
     {{ content }}
   </div>
-</div>
+</article>

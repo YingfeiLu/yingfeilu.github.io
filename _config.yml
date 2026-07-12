@@ -1,4 +1,4 @@
-url: "https://yingfeilu.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yingfeilu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Yingfei Lu" # the name of your site, e.g. ACME Corp.
 chintitle: "陆盈斐" # chinese name of your site, can be left empty

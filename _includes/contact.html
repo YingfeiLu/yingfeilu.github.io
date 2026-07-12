@@ -1,21 +1,30 @@
-<div class="row g-5 mb-5">
-  <div>
-    <h3 class=" border-bottom pb-3 mb-5">Contact</h3>
-    {% for contact in site.data.settings.contacts %}
-    <div class="row g-5 mb-5">
-      <div class="col-md-6">
-        <h4>{{ contact.name }}</h4>
-        <p>{{ contact.title }}  {{ contact.department }}</p>
-        <ul>
-          <li>{{ contact.institution }} | {{ contact.institution_address }}</li>
-          <li>Email: {{ contact.email }}</li>
-          <li>Office: {{ contact.office }}</li>
-        </ul>
+{% for contact in site.data.settings.contacts %}
+<article class="contact-card">
+  <div class="contact-card__details">
+    <p class="eyebrow">Contact details</p>
+    <h2>{{ contact.name }}</h2>
+    <p class="contact-card__role">{{ contact.position }} · {{ contact.department | strip }}</p>
+    <dl class="contact-list">
+      <div>
+        <dt>Institution</dt>
+        <dd>{{ contact.institution }}</dd>
       </div>
-      <div class="col-md-6">
-        <img src="{{ site.github.url }}/{{ contact.image }}" alt="Contact" width="100%">
+      <div>
+        <dt>Address</dt>
+        <dd>{{ contact.institution_address }}</dd>
       </div>
-    </div>
-    {% endfor %}
+      <div>
+        <dt>Email</dt>
+        <dd><a class="contact-card__email" href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>
+      </div>
+      <div>
+        <dt>Office</dt>
+        <dd>{{ contact.office }}</dd>
+      </div>
+    </dl>
   </div>
-</div>
+  <div class="contact-card__image">
+    <img src="{{ '/' | append: contact.image | relative_url }}" alt="Portrait of {{ contact.name }}" width="1279" height="1706">
+  </div>
+</article>
+{% endfor %}

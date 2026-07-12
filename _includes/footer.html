@@ -1,9 +1,14 @@
-<footer class="pt-5 my-5 text-muted border-top">
-  <div class="row">
-    <div class="col-md-6 text-end social-media-icons">
+<footer class="site-footer">
+  <div class="site-footer__identity">
+    <a href="{{ '/' | relative_url }}" class="site-footer__name">{{ site.title }} <span class="chinese-text" lang="zh">{{ site.chintitle }}</span></a>
+    <p>{{ site.description }}</p>
+  </div>
+  <div class="site-footer__meta">
+    <div class="social-links" aria-label="Social profiles">
       {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+        <a href="{{ item.link }}" aria-label="{{ item.icon | replace: '-', ' ' | capitalize }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a>
       {% endfor %}
     </div>
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
   </div>
 </footer>
