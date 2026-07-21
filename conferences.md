@@ -3,6 +3,14 @@ layout: conferences
 title: "Conferences"
 ---
 <article class="timeline__item">
+  <time class="timeline__date" datetime="2026-05-06">May 6<br>2026</time>
+  <div class="timeline__content">
+    <h3>Linguistic Colloquium, University of Graz</h3>
+    <p>Graz, Austria. Talk with Zi Huang and Fabio Montermini: <em>Descriptive and Evaluative Meaning in Spanish Diminutive Prefixes: A Case Study of micro- and mini-.</em></p>
+  </div>
+</article>
+
+<article class="timeline__item">
   <time class="timeline__date" datetime="2026-04-20">April 20–22<br>2026</time>
   <div class="timeline__content">
     <h3><a href="https://site.unibo.it/unlocking-evaluative-morphology/en/evalmo-ii/call-for-papers">Unlocking Evaluative Morphology II: Semantic Values and Pragmatic Motivations</a></h3>
