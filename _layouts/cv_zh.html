@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<header class="page-header">
+  <p class="eyebrow">个人履历</p>
+  <h1>经历与教育背景</h1>
+  <div class="page-header__intro">{{ content }}</div>
+  <div class="page-header__rule" aria-hidden="true"></div>
+</header>
+
+<div class="cv-sections">
+  <section class="cv-section" aria-labelledby="education-heading">
+    <div class="cv-section__heading"><h2 id="education-heading">教育背景</h2></div>
+    <div class="cv-list">
+      {% for section in site.data.cv.education_zh %}
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
+          <p>{{ section.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="cv-section" aria-labelledby="academic-heading">
+    <div class="cv-section__heading"><h2 id="academic-heading">学术经历</h2></div>
+    <div class="cv-list">
+      {% for section in site.data.cv.academic_experience_zh %}
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
+          <p>{{ section.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="cv-section" aria-labelledby="unesco-heading">
+    <div class="cv-section__heading"><h2 id="unesco-heading">UNESCO 经历</h2></div>
+    <div class="cv-list">
+      {% for section in site.data.cv.unesco_experience_zh %}
+        <article class="cv-entry">
+          {% if section.date %}<p class="timeline__date">{{ section.date }}</p>{% endif %}
+          <h3>{{ section.title }}</h3>
+          <p>{{ section.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>

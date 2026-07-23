@@ -6,6 +6,14 @@ menu:
 - {name: 'contact', url: '/contact'}
 - {name: 'gallery', url: '/gallery'}
 
+menu_zh:
+- {name: '出版成果', url: '/zh/publications'}
+- {name: '学术活动', url: '/zh/conferences'}
+- {name: '服务', url: '/zh/services'}
+- {name: '履历', url: '/zh/cv'}
+- {name: '联系', url: '/zh/contact'}
+- {name: '影集', url: '/zh/gallery'}
+
 
 social:
 - {icon: 'github', link: 'https://github.com/YingfeiLu'}

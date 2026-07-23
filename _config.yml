@@ -2,6 +2,8 @@ url: "https://yingfeilu.github.io" # the base hostname & protocol for your site,
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Yingfei Lu" # the name of your site, e.g. ACME Corp.
 chintitle: "陆盈斐" # chinese name of your site, can be left empty
+lang: "en"
 description: "Predoctoral researcher in Linguistics, Universitat Pompeu Fabra"
+description_zh: "庞培法布拉大学语言学博士前研究员"
 plugins:
   - jekyll-seo-tag

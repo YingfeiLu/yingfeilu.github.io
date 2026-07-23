@@ -18,6 +18,7 @@
   --color-shadow: rgba(23, 33, 31, 0.09);
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-chinese: var(--font-display);
   --content-width: 1180px;
   --reading-width: 760px;
   --radius-sm: 0.4rem;
@@ -159,8 +160,38 @@ li::marker {
 }
 
 .chinese-text {
-  font-family: "Ma Shan Zheng", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-chinese);
+  font-weight: 600;
+}
+
+html[lang="zh"] body,
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] h4,
+html[lang="zh"] h5,
+html[lang="zh"] h6 {
+  font-family: var(--font-chinese);
+}
+
+html[lang="zh"] body {
+  line-height: 1.85;
+}
+
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] h4,
+html[lang="zh"] h5,
+html[lang="zh"] h6 {
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+html[lang="zh"] .eyebrow,
+html[lang="zh"] .site-nav__link {
+  letter-spacing: 0.06em;
+  text-transform: none;
 }
 
 .eyebrow {
@@ -203,6 +234,13 @@ li::marker {
   gap: 2rem;
 }
 
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
 .site-brand {
   display: inline-flex;
   align-items: baseline;
@@ -221,6 +259,31 @@ li::marker {
 .site-brand__chinese {
   color: var(--color-ink);
   font-size: 1.25rem;
+}
+
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+}
+
+.locale-switcher__link {
+  padding: 0.3rem 0.55rem;
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.locale-switcher__link:hover,
+.locale-switcher__link.is-active {
+  background: var(--color-primary);
+  color: #10201d;
 }
 
 .site-nav {
@@ -841,6 +904,29 @@ li::marker {
   margin-bottom: 0.65rem;
 }
 
+.activity-details {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.activity-details strong {
+  color: var(--color-ink);
+}
+
+html[lang="zh"] .timeline__content .activity-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.activity-title em {
+  font-style: italic;
+}
+
 .cv-sections {
   display: grid;
   gap: clamp(3.5rem, 7vw, 6rem);
@@ -864,7 +950,7 @@ li::marker {
 }
 
 .cv-entry {
-  padding: 1.5rem 1.65rem;
+  padding: 1.7rem 1.8rem;
   background: var(--color-surface);
   border-left: 0.35rem solid var(--color-primary);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -874,13 +960,19 @@ li::marker {
 .cv-section:nth-child(3) .cv-entry { border-left-color: var(--color-primary); }
 
 .cv-entry h3 {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.75rem;
   font-size: 1.4rem;
+  line-height: 1.3;
 }
 
 .cv-entry p {
   margin-bottom: 0;
   color: var(--color-muted);
+}
+
+.cv-entry .timeline__date {
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
 }
 
 /* Contact */
@@ -1282,6 +1374,8 @@ li::marker {
 
   .site-brand__name { font-size: 1.35rem; }
   .site-brand__chinese { font-size: 1.05rem; }
+  .site-branding { gap: 0.5rem; }
+  .locale-switcher__link { padding: 0.28rem 0.45rem; font-size: 0.62rem; }
 
   .site-main {
     padding-block: 3.25rem;

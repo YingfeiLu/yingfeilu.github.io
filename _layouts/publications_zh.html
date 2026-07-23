@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<header class="page-header">
+  <p class="eyebrow">研究</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-header__intro">围绕英语与西班牙语的形态学、新词研究与词典学。</p>
+  {% if content != empty %}<div class="page-header__intro">{{ content }}</div>{% endif %}
+  <div class="page-header__rule" aria-hidden="true"></div>
+</header>
+{% include publications_zh.html %}

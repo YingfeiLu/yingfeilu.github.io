@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="home-hero__copy">
+    <p class="eyebrow">语言学者 · 形态学研究者 · 研究人员 · 学术辅导 · 联络口译</p>
+    <h1 id="home-title">Yingfei Lu <span class="home-hero__chinese chinese-text" lang="zh">{{ site.chintitle }}</span></h1>
+    <p class="home-hero__lead">{{ page.hero_lead }}</p>
+    <p class="home-hero__affiliation">{{ page.hero_affiliation }}</p>
+    <div class="button-row">
+      <a class="button" href="{{ '/zh/cv' | relative_url }}">查看履历</a>
+      <a class="button button--secondary" href="{{ '/zh/contact' | relative_url }}">联系我</a>
+    </div>
+  </div>
+  <div class="home-hero__portrait">
+    <img src="{{ '/assets/img/home.jpg' | relative_url }}" alt="陆盈斐肖像" width="1536" height="2048" fetchpriority="high">
+  </div>
+</section>
+
+<section class="home-section home-section--about" aria-labelledby="about-heading">
+  <div class="section-heading">
+    <h2 id="about-heading">关于我</h2>
+    <p>语言、地方、音乐，以及塑造我研究视角的经历。</p>
+  </div>
+  {{ content }}
+</section>
+
+{% include publications_zh.html %}
+
+<section class="home-section home-section--updates" aria-labelledby="updates-heading">
+  <div class="section-heading">
+    <h2 id="updates-heading">近期动态</h2>
+    <p>记录博士阶段的会议、报告、奖学金与重要里程碑。</p>
+  </div>
+  <div class="updates-grid">
+    {% assign zh_updates = site.pages | where: 'translation_type', 'update' | sort: 'date' | reverse %}
+    {% for post in zh_updates %}
+      <a class="update-card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+        <h3>{{ post.title }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>

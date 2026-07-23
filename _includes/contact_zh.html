@@ -1,0 +1,30 @@
+{% for contact in site.data.settings.contacts %}
+<article class="contact-card">
+  <div class="contact-card__details">
+    <p class="eyebrow">联系方式</p>
+    <h2>{{ contact.name }}</h2>
+    <p class="contact-card__role">博士前研究员 · 翻译与语言科学系</p>
+    <dl class="contact-list">
+      <div>
+        <dt>机构</dt>
+        <dd>{{ contact.institution }}</dd>
+      </div>
+      <div>
+        <dt>地址</dt>
+        <dd>{{ contact.institution_address }}</dd>
+      </div>
+      <div>
+        <dt>邮箱</dt>
+        <dd><a class="contact-card__email" href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>
+      </div>
+      <div>
+        <dt>办公室</dt>
+        <dd>{{ contact.office }}</dd>
+      </div>
+    </dl>
+  </div>
+  <div class="contact-card__image">
+    <img src="{{ '/' | append: contact.image | relative_url }}" alt="{{ contact.name }}肖像" width="1279" height="1706">
+  </div>
+</article>
+{% endfor %}

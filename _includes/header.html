@@ -1,9 +1,27 @@
 <header class="site-header">
+  {% assign is_zh = page.lang == 'zh' %}
+  {% if is_zh %}
+    {% assign home_url = '/zh/' %}
+    {% assign navigation = site.data.settings.menu_zh %}
+    {% assign english_url = page.url | remove_first: '/zh' %}
+    {% assign chinese_url = page.url %}
+  {% else %}
+    {% assign home_url = '/' %}
+    {% assign navigation = site.data.settings.menu %}
+    {% assign english_url = page.url %}
+    {% assign chinese_url = '/zh' | append: page.url %}
+  {% endif %}
   <div class="site-header__inner">
-    <a href="{{ '/' | relative_url }}" class="site-brand" aria-label="{{ site.title }}, home">
-      <span class="site-brand__name">{{ site.title }}</span>
-      <span class="site-brand__chinese chinese-text" lang="zh">{{ site.chintitle }}</span>
-    </a>
+    <div class="site-branding">
+      <a href="{{ home_url | relative_url }}" class="site-brand" aria-label="{{ site.title }}, home">
+        <span class="site-brand__name">{{ site.title }}</span>
+        <span class="site-brand__chinese chinese-text" lang="zh">{{ site.chintitle }}</span>
+      </a>
+      <div class="locale-switcher" aria-label="Language selector">
+        <a class="locale-switcher__link{% unless is_zh %} is-active{% endunless %}" href="{{ english_url | relative_url }}" lang="en">English</a>
+        <a class="locale-switcher__link{% if is_zh %} is-active{% endif %}" href="{{ chinese_url | relative_url }}" lang="zh">中文</a>
+      </div>
+    </div>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
       <span class="menu-toggle__label">Menu</span>
@@ -11,7 +29,7 @@
     </button>
 
     <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-      {% for item in site.data.settings.menu %}
+      {% for item in navigation %}
         {% assign current_url = page.url | remove: '.html' | remove_last: '/' %}
         <a class="site-nav__link{% if current_url == item.url %} is-active{% endif %}"
            {% if current_url == item.url %}aria-current="page"{% endif %}

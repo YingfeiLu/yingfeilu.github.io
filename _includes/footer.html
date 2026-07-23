@@ -1,7 +1,9 @@
 <footer class="site-footer">
+  {% assign is_zh = page.lang == 'zh' %}
+  {% if is_zh %}{% assign footer_home_url = '/zh/' %}{% else %}{% assign footer_home_url = '/' %}{% endif %}
   <div class="site-footer__identity">
-    <a href="{{ '/' | relative_url }}" class="site-footer__name">{{ site.title }} <span class="chinese-text" lang="zh">{{ site.chintitle }}</span></a>
-    <p>{{ site.description }}</p>
+    <a href="{{ footer_home_url | relative_url }}" class="site-footer__name">{{ site.title }} <span class="chinese-text" lang="zh">{{ site.chintitle }}</span></a>
+    <p>{% if is_zh %}{{ site.description_zh }}{% else %}{{ site.description }}{% endif %}</p>
   </div>
   <div class="site-footer__meta">
     <div class="social-links" aria-label="Social profiles">
