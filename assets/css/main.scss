@@ -495,6 +495,7 @@ html[lang="zh"] .site-nav__link {
 }
 
 .service-selector__card {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   min-height: 14rem;
@@ -521,7 +522,11 @@ html[lang="zh"] .site-nav__link {
 
 .service-selector__card h2 {
   margin: 0.25rem 0 0.75rem;
-  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  max-inline-size: 100%;
+  font-size: clamp(1.45rem, 2vw, 1.9rem);
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .service-selector__card > span {
