@@ -908,6 +908,7 @@ html[lang="zh"] .site-nav__link {
   display: grid;
   gap: 0.4rem;
   margin: 0;
+  font-family: var(--font-display);
 }
 
 .activity-details strong {
@@ -920,6 +921,15 @@ html[lang="zh"] .timeline__content .activity-title {
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.timeline__content .activity-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
   text-wrap: pretty;
 }
 
