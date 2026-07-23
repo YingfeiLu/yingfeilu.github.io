@@ -420,6 +420,121 @@ li::marker {
   border-top: 1px solid var(--color-line);
 }
 
+.service-page {
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.service-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-selector__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 14rem;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  border-top: 0.3rem solid var(--color-primary);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.service-selector__card:nth-child(even) {
+  border-top-color: var(--color-accent);
+}
+
+.service-selector__card:hover {
+  color: var(--color-ink);
+  border-color: var(--color-primary-strong);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-4px);
+}
+
+.service-selector__card h2 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.service-selector__card > span {
+  margin-top: auto;
+  color: var(--color-primary-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.service-selector__card:nth-child(even) > span {
+  color: var(--color-accent-strong);
+}
+
+.service-page__lead {
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.5;
+}
+
+.service-page__section {
+  margin: 0;
+  scroll-margin-top: 7rem;
+}
+
+.service-page__section h2 {
+  margin-top: 0;
+  width: fit-content;
+  padding-inline: 0.08em;
+  box-shadow: inset 0 -0.28em 0 var(--color-primary-soft);
+}
+
+.service-page__section > h3 {
+  margin-top: 2.5rem;
+  font-size: 1.35rem;
+}
+
+.service-page__section:nth-of-type(even) h2 {
+  box-shadow: inset 0 -0.28em 0 var(--color-accent-soft);
+}
+
+.service-grid .bio-card h3 {
+  margin-top: 0;
+}
+
+.service-grid .bio-card:nth-child(odd) {
+  border-top: 0.3rem solid var(--color-primary);
+}
+
+.service-grid .bio-card:nth-child(even) {
+  border-top: 0.3rem solid var(--color-accent);
+}
+
+.service-page .timeline__item {
+  border-top: 0.3rem solid var(--color-primary);
+}
+
+.service-page .timeline__content li::marker {
+  color: var(--color-primary-strong);
+}
+
+.service-page__cta {
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  background: var(--color-primary-soft);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.service-page__cta p {
+  max-width: 560px;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -1150,6 +1265,10 @@ li::marker {
 @media (max-width: 620px) {
   body {
     font-size: 0.96rem;
+  }
+
+  .service-selector {
+    grid-template-columns: 1fr;
   }
 
   .site-header__inner {

@@ -1,6 +1,7 @@
 menu:
 - {name: 'publications', url: '/publications'}
 - {name: 'conferences', url: '/conferences'}
+- {name: 'services', url: '/services'}
 - {name: 'cv', url: '/cv'}
 - {name: 'contact', url: '/contact'}
 - {name: 'gallery', url: '/gallery'}
