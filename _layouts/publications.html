@@ -8,7 +8,11 @@ layout: default
   <p class="eyebrow">{{ labels.publications_kicker }}</p>
   <h1>{{ page.title }}</h1>
   <p class="page-header__intro">{{ labels.publications_intro }}</p>
-  {% if content != empty %}<div class="page-header__intro">{{ content }}</div>{% endif %}
   <div class="page-header__rule" aria-hidden="true"></div>
 </header>
+{% if content != empty %}
+<section class="publication-list" aria-label="{{ page.title }}">
+  {{ content }}
+</section>
+{% endif %}
 {% include publications.html %}

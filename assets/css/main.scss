@@ -491,6 +491,38 @@ html[lang="zh"] .site-nav__link {
   border-top: 1px solid var(--color-line);
 }
 
+.publication-list {
+  max-width: 900px;
+  margin-bottom: clamp(5rem, 8vw, 7rem);
+}
+
+.publication-entry {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-top: 0.3rem solid var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.publication-entry__meta {
+  margin: 0 0 1rem;
+  color: var(--color-primary-strong);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.publication-entry__citation {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.publication-entry__citation a {
+  overflow-wrap: anywhere;
+}
+
 .service-page {
   display: grid;
   gap: clamp(3rem, 6vw, 5rem);
