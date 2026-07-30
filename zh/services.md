@@ -2,6 +2,8 @@
 layout: page
 lang: zh
 title: "服务"
+description: "语言学、科研交流、学术辅导与联络口译方面的语言和学术支持。"
+translation_url: "/services.html"
 kicker: "语言与学术支持"
 ---
 

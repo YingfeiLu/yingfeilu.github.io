@@ -1,6 +1,8 @@
 ---
 layout: conferences
 title: "Conferences"
+description: "Selected conference papers and posters presented by Yingfei Lu at international linguistics meetings."
+translation_url: "/zh/conferences.html"
 ---
 <article class="timeline__item">
   <time class="timeline__date" datetime="2026-05-06">May 6<br>2026</time>

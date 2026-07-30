@@ -1,6 +1,8 @@
 ---
 layout: publications
 title: "Publications"
+description: "Selected publications by Yingfei Lu on English and Spanish neology, morphology, and lexicography."
+translation_url: "/zh/publications.html"
 ---
 
 <h3 class="border-bottom pb-3 mb-5">Publications</h3>

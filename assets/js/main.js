@@ -3,35 +3,72 @@
 
   const menuButton = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".site-nav");
+  const backgroundRegions = [
+    document.querySelector(".site-main"),
+    document.querySelector(".site-footer")
+  ].filter(Boolean);
 
-  function closeMenu() {
+  function setBackgroundInert(isInert) {
+    backgroundRegions.forEach(function (region) {
+      region.inert = isInert;
+    });
+  }
+
+  function closeMenu(restoreFocus) {
     if (!menuButton || !navigation) return;
     menuButton.setAttribute("aria-expanded", "false");
     navigation.classList.remove("is-open");
     document.body.classList.remove("menu-open");
+    setBackgroundInert(false);
+    if (restoreFocus) menuButton.focus();
   }
 
   if (menuButton && navigation) {
     menuButton.addEventListener("click", function () {
       const willOpen = menuButton.getAttribute("aria-expanded") !== "true";
-      menuButton.setAttribute("aria-expanded", String(willOpen));
-      navigation.classList.toggle("is-open", willOpen);
-      document.body.classList.toggle("menu-open", willOpen);
+      if (!willOpen) {
+        closeMenu(false);
+        return;
+      }
+
+      menuButton.setAttribute("aria-expanded", "true");
+      navigation.classList.add("is-open");
+      document.body.classList.add("menu-open");
+      setBackgroundInert(true);
+
+      const firstLink = navigation.querySelector("a");
+      if (firstLink) firstLink.focus();
     });
 
     navigation.addEventListener("click", function (event) {
-      if (event.target.closest("a")) closeMenu();
+      if (event.target.closest("a")) closeMenu(false);
     });
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && navigation.classList.contains("is-open")) {
-        closeMenu();
-        menuButton.focus();
+      if (!navigation.classList.contains("is-open")) return;
+
+      if (event.key === "Escape") {
+        closeMenu(true);
+        return;
+      }
+
+      if (event.key === "Tab") {
+        const focusable = [menuButton].concat(Array.from(navigation.querySelectorAll("a")));
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 900) closeMenu();
+      if (window.innerWidth > 900) closeMenu(false);
     });
   }
 

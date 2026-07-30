@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
   {% include head.html %}
-  <body class="layout-{{ page.layout | default: 'default' }}">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  {% assign body_layout = page.layout | default: 'default' %}
+  {% if page.lang == 'zh' %}
+    {% case page.layout %}
+      {% when 'post' %}{% assign body_layout = 'post_zh' %}
+      {% when 'contact' %}{% assign body_layout = 'contact_zh' %}
+      {% when 'publications' %}{% assign body_layout = 'publications_zh' %}
+      {% when 'conferences' %}{% assign body_layout = 'conferences_zh' %}
+    {% endcase %}
+  {% endif %}
+  <body class="layout-{{ body_layout }}">
+    {% assign locale = page.lang | default: site.lang %}
+    {% assign labels = site.data.i18n[locale] %}
+    <a class="skip-link" href="#main-content">{{ labels.skip_to_content }}</a>
     {% include header.html %}
     <main id="main-content" class="site-main">
       {{ content }}

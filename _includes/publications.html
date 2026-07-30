@@ -1,9 +1,19 @@
+{% assign locale = page.lang | default: site.lang %}
 <section class="{% if page.title == 'Home' %}home-section {% endif %}research-overview" aria-labelledby="research-heading">
-  <div class="research-overview__heading">
-    <p class="eyebrow">Research</p>
-    <h2 id="research-heading">How words move and change</h2>
+  <div{% unless locale == 'zh' %} class="research-overview__heading"{% endunless %}>
+    <p class="eyebrow">{% if locale == 'zh' %}研究方向{% else %}Research{% endif %}</p>
+    <h2 id="research-heading">{% if locale == 'zh' %}词语如何变化与流动{% else %}How words move and change{% endif %}</h2>
   </div>
   <div class="research-overview__content">
+    {% if locale == 'zh' %}
+    <p>我的研究兴趣集中于形态学、新词研究与词典学。具体而言，我关注构词成分（词根、类词缀与词缀）、过渡形态学，以及英语与西班牙语的对比语言学。当前研究以 Mattiello（2022）提出的过渡形态学为框架，探讨两种语言中词缀与类词缀的区分，并希望为这一理论模型的发展作出贡献。</p>
+    <h3>研究目标</h3>
+    <ol class="research-objectives">
+      <li>理解构词过程中的形态模式</li>
+      <li>评估跨语言语义的稳定性</li>
+      <li>探究数字词典中的词典学呈现</li>
+    </ol>
+    {% else %}
     <p>My research interests center on morphology, neology, and lexicography. More specifically, I am passionate about studying word elements (combining forms and affixes), transitional morphology, and comparative linguistics in English and Spanish. My current research focuses on distinguishing between affixes and combining forms in both languages, using the framework of Transitional Morphology (Mattiello, 2022), with the goal of contributing to and advancing this theoretical model.</p>
     <h3>Research objectives</h3>
     <ol class="research-objectives">
@@ -11,5 +21,6 @@
       <li>Evaluating semantic stability across languages</li>
       <li>Exploring lexicographic representation in digital dictionaries</li>
     </ol>
+    {% endif %}
   </div>
 </section>

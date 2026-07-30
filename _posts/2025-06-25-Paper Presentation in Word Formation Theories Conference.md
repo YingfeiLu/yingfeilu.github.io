@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Paper presentation at Word-Formation Theories VII & Typology and Universals in Word-Formation VI"
+translation_url: "/zh/2025/06/25/Paper-Presentation-in-Word-Formation-Theories-Conference.html"
 ---
 
 From 25 to 28 June 2025, I attended Word-Formation Theories VII and Typology and Universals in Word-Formation VI, organized by the Department of British and American Studies at Pavol Jozef Šafárik University in Košice, Slovakia.

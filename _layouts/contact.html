@@ -2,8 +2,10 @@
 layout: default
 ---
 
+{% assign locale = page.lang | default: site.lang %}
+{% assign labels = site.data.i18n[locale] %}
 <header class="page-header">
-  <p class="eyebrow">Let’s connect</p>
+  <p class="eyebrow">{{ labels.contact_kicker }}</p>
   <h1>{{ page.title }}</h1>
   <div class="page-header__intro">{{ content }}</div>
   <div class="page-header__rule" aria-hidden="true"></div>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Talk at the Linguistic Colloquium, University of Graz"
+translation_url: "/zh/2026/05/06/Talk-at-the-Linguistic-Colloquium-University-of-Graz.html"
 ---
 
 On May 6, 2026, I gave a talk at the Linguistic Colloquium of the University of Graz with Dr. Zi Huang and Prof. Dr. Fabio Montermini.

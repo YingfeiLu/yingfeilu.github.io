@@ -1,9 +1,10 @@
 ---
-layout: post_zh
+layout: post
 lang: zh
 translation_type: update
 date: 2026-05-06
 title: "在 Linguistic Colloquium, University of Graz 作报告"
+translation_url: "/2026/05/06/Talk-at-the-Linguistic-Colloquium-University-of-Graz.html"
 ---
 
 2026 年 5 月 6 日，我与 Zi Huang 博士和 Fabio Montermini 教授在 Linguistic Colloquium, University of Graz 共同作报告。

@@ -1,7 +1,9 @@
 ---
-layout: conferences_zh
+layout: conferences
 lang: zh
 title: "学术活动"
+description: "陆盈斐在国际语言学会议上发表的部分论文报告与海报。"
+translation_url: "/conferences.html"
 ---
 
 <article class="timeline__item">

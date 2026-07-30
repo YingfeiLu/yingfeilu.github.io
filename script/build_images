@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+image_dir="$repo_root/assets/img"
+
+if ! command -v magick >/dev/null 2>&1; then
+  echo "ImageMagick is required. Install it, then rerun script/build_images." >&2
+  exit 1
+fi
+
+render_variant() {
+  local source_name="$1"
+  local width="$2"
+  local output_name="$3"
+
+  magick "$image_dir/$source_name" \
+    -auto-orient \
+    -strip \
+    -resize "${width}x>" \
+    -sampling-factor 4:2:0 \
+    -interlace Plane \
+    -quality 82 \
+    "$image_dir/$output_name"
+}
+
+render_variant "home.jpg" 640 "home-640.jpg"
+render_variant "home.jpg" 960 "home-960.jpg"
+render_variant "contact.jpg" 640 "contact-640.jpg"
+render_variant "contact.jpg" 1200 "contact-1200.jpg"
+
+render_variant "WHEC2022.jpg" 640 "WHEC2022-640.jpg"
+render_variant "GDUFS01_202206.jpg" 640 "GDUFS01_202206-640.jpg"
+render_variant "masterdefense01_202307.jpg" 640 "masterdefense01_202307-640.jpg"
+render_variant "masterdefense01_202307.jpg" 1200 "masterdefense01_202307-1200.jpg"
+render_variant "toulouse-portrait.jpg" 640 "toulouse-portrait-640.jpg"
+render_variant "toulouse-garonne.jpg" 640 "toulouse-garonne-640.jpg"
+render_variant "toulouse-garonne.jpg" 1200 "toulouse-garonne-1200.jpg"
+render_variant "toulouse-university.jpg" 640 "toulouse-university-640.jpg"
+render_variant "toulouse-university.jpg" 1200 "toulouse-university-1200.jpg"
+render_variant "toulouse-lab.jpg" 640 "toulouse-lab-640.jpg"
+render_variant "toulouse-lab.jpg" 1200 "toulouse-lab-1200.jpg"
+render_variant "toulouse-evening.jpg" 640 "toulouse-evening-640.jpg"
+render_variant "toulouse-evening.jpg" 1200 "toulouse-evening-1200.jpg"
+
+magick "$image_dir/home.jpg" \
+  -auto-orient \
+  -strip \
+  -resize "1200x630^" \
+  -gravity center \
+  -extent 1200x630 \
+  -sampling-factor 4:2:0 \
+  -interlace Plane \
+  -quality 84 \
+  "$image_dir/social-preview.jpg"
+
+echo "Responsive image assets regenerated."

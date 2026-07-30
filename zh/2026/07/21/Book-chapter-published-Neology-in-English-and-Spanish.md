@@ -1,9 +1,10 @@
 ---
-layout: post_zh
+layout: post
 lang: zh
 translation_type: update
 date: 2026-07-21
 title: "书籍章节出版：《Neology in English and Spanish. 2005–2015. Lexicological Characteristics and Lexicographic Representation》"
+translation_url: "/2026/07/21/Book-chapter-published-Neology-in-English-and-Spanish.html"
 ---
 
 很高兴与大家分享：我的书籍章节 *Neology in English and Spanish. 2005–2015. Lexicological Characteristics and Lexicographic Representation* 现已出版。

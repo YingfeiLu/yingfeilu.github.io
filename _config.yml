@@ -7,3 +7,23 @@ description: "Predoctoral researcher in Linguistics, Universitat Pompeu Fabra"
 description_zh: "庞培法布拉大学语言学博士前研究员"
 plugins:
   - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: "/assets/img/social-preview.jpg"
+        width: 1200
+        height: 630
+
+# Development files and archival sources should not become public site URLs.
+exclude:
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.md
+  - REPOSITORY_AUDIT_AND_IMPROVEMENT_PLAN.md
+  - THIRD_PARTY_NOTICES.md
+  - script
+  - source-assets

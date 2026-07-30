@@ -16,12 +16,12 @@ menu_zh:
 
 
 social:
-- {icon: 'github', link: 'https://github.com/YingfeiLu'}
-- {icon: 'x-twitter', link: 'https://x.com/luyingfeii?s=21&t=IgtHhQpXhVdnV2Q0Zx-jGA'}
-- {icon: 'instagram', link: 'https://www.instagram.com/luyingfeii/profilecard/?igsh=ejBvazllbTU0c2M5'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/yingfei-lu-509a1a217'}
-- {icon: 'orcid', link: 'https://orcid.org/0009-0007-2329-432X'}
-- {icon: 'researchgate', link: 'https://www.researchgate.net/profile/Yingfei-Lu'}
+- {icon: 'github', label: 'GitHub', link: 'https://github.com/YingfeiLu'}
+- {icon: 'x-twitter', label: 'X', link: 'https://x.com/luyingfeii?s=21&t=IgtHhQpXhVdnV2Q0Zx-jGA'}
+- {icon: 'instagram', label: 'Instagram', link: 'https://www.instagram.com/luyingfeii/profilecard/?igsh=ejBvazllbTU0c2M5'}
+- {icon: 'linkedin', label: 'LinkedIn', link: 'https://www.linkedin.com/in/yingfei-lu-509a1a217'}
+- {icon: 'orcid', label: 'ORCID', link: 'https://orcid.org/0009-0007-2329-432X'}
+- {icon: 'researchgate', label: 'ResearchGate', link: 'https://www.researchgate.net/profile/Yingfei-Lu'}
 
 
 contacts:

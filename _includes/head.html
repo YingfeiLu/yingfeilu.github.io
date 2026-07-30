@@ -6,7 +6,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
-  <script defer src="{{ '/assets/libs/fontawesome/all.min.js' | relative_url }}"></script>
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
@@ -17,5 +16,17 @@
   <link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/apple-icon-152x152.png' | relative_url }}">
   <link rel="mask-icon" href="{{ '/assets/safari-pinned-tab.svg' | relative_url }}" color="#a8dce6">
   <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}">
+  {% if page.translation_url %}
+    {% if page.lang == 'zh' %}
+      {% assign english_url = page.translation_url %}
+      {% assign chinese_url = page.url %}
+    {% else %}
+      {% assign english_url = page.url %}
+      {% assign chinese_url = page.translation_url %}
+    {% endif %}
+    <link rel="alternate" hreflang="en" href="{{ english_url | absolute_url }}">
+    <link rel="alternate" hreflang="zh" href="{{ chinese_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ english_url | absolute_url }}">
+  {% endif %}
   {% seo %}
 </head>

@@ -1,6 +1,8 @@
 ---
 layout: home
 title: "Home"
+description: "Yingfei Lu is a doctoral researcher studying morphology, neology, and lexicography across English and Spanish."
+translation_url: "/zh/"
 hero_lead: "Hello, I’m Yingfei, or Estefanía in Spanish. I’m a PhD researcher exploring how new words take shape across English and Spanish."
 hero_affiliation: "Predoctoral researcher in the Department of Translation and Language Sciences at Universitat Pompeu Fabra, Barcelona."
 ---
@@ -10,14 +12,14 @@ hero_affiliation: "Predoctoral researcher in the Department of Translation and L
 <p class="eyebrow">My academic path</p>
 <h3>From Guangzhou to Barcelona</h3>
 <p>I am from Guangzhou, China. My name is Yingfei Lu, and my Spanish name is Estefanía. I am currently a third-year PhD student in the
-<a href="https://www.upf.edu/web/traduccio" target="_blank">Department of Translation and Language Sciences</a>
+<a href="https://www.upf.edu/web/traduccio" target="_blank" rel="noopener noreferrer">Department of Translation and Language Sciences</a>
 at
-<a href="https://www.upf.edu/" target="_blank">Universitat Pompeu Fabra</a>, under the supervision of
-<a href="https://www.upf.edu/web/elisenda-bernal" target="_blank">Dr. Elisenda Bernal</a>
+<a href="https://www.upf.edu/" target="_blank" rel="noopener noreferrer">Universitat Pompeu Fabra</a>, under the supervision of
+<a href="https://www.upf.edu/web/elisenda-bernal" target="_blank" rel="noopener noreferrer">Dr. Elisenda Bernal</a>
 and
-<a href="https://www.upf.edu/web/alba-mila" target="_blank">Dr. Alba Milà-Garcia</a>.
-I am a member of <i><a href="https://www.upf.edu/web/infolex" target="_blank">Infolex</a></i> and <i><a href="https://www.upf.edu/web/tradilex" target="_blank">TraDiLex</a></i>.
-From September 2025 to January 2026 I conducted a research stay at <a href="https://www.univ-tlse2.fr/" target="_blank">Université Toulouse – Jean Jaurès</a> in France.</p>
+<a href="https://www.upf.edu/web/alba-mila" target="_blank" rel="noopener noreferrer">Dr. Alba Milà-Garcia</a>.
+I am a member of <i><a href="https://www.upf.edu/web/infolex" target="_blank" rel="noopener noreferrer">Infolex</a></i> and <i><a href="https://www.upf.edu/web/tradilex" target="_blank" rel="noopener noreferrer">TraDiLex</a></i>.
+From September 2025 to January 2026 I conducted a research stay at <a href="https://www.univ-tlse2.fr/" target="_blank" rel="noopener noreferrer">Université Toulouse – Jean Jaurès</a> in France.</p>
 </article>
 
 <article class="bio-card">

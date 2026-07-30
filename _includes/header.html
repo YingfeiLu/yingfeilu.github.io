@@ -1,34 +1,38 @@
 <header class="site-header">
-  {% assign is_zh = page.lang == 'zh' %}
+  {% assign locale = page.lang | default: site.lang %}
+  {% assign labels = site.data.i18n[locale] %}
+  {% assign is_zh = false %}
+  {% if locale == 'zh' %}{% assign is_zh = true %}{% endif %}
   {% if is_zh %}
     {% assign home_url = '/zh/' %}
     {% assign navigation = site.data.settings.menu_zh %}
-    {% assign english_url = page.url | remove_first: '/zh' %}
-    {% assign chinese_url = page.url %}
   {% else %}
     {% assign home_url = '/' %}
     {% assign navigation = site.data.settings.menu %}
-    {% assign english_url = page.url %}
-    {% assign chinese_url = '/zh' | append: page.url %}
   {% endif %}
   <div class="site-header__inner">
     <div class="site-branding">
-      <a href="{{ home_url | relative_url }}" class="site-brand" aria-label="{{ site.title }}, home">
+      <a href="{{ home_url | relative_url }}" class="site-brand" aria-label="{{ labels.home_label }}">
         <span class="site-brand__name">{{ site.title }}</span>
         <span class="site-brand__chinese chinese-text" lang="zh">{{ site.chintitle }}</span>
       </a>
-      <div class="locale-switcher" aria-label="Language selector">
-        <a class="locale-switcher__link{% unless is_zh %} is-active{% endunless %}" href="{{ english_url | relative_url }}" lang="en">English</a>
-        <a class="locale-switcher__link{% if is_zh %} is-active{% endif %}" href="{{ chinese_url | relative_url }}" lang="zh">中文</a>
+      <div class="locale-switcher" aria-label="{{ labels.language_selector }}">
+        {% if is_zh %}
+          {% if page.translation_url %}<a class="locale-switcher__link" href="{{ page.translation_url | relative_url }}" lang="en">English</a>{% endif %}
+          <a class="locale-switcher__link is-active" href="{{ page.url | relative_url }}" lang="zh" aria-current="page">中文</a>
+        {% else %}
+          <a class="locale-switcher__link is-active" href="{{ page.url | relative_url }}" lang="en" aria-current="page">English</a>
+          {% if page.translation_url %}<a class="locale-switcher__link" href="{{ page.translation_url | relative_url }}" lang="zh">中文</a>{% endif %}
+        {% endif %}
       </div>
     </div>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
-      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__label">{{ labels.menu }}</span>
       <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
     </button>
 
-    <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+    <nav class="site-nav" id="site-navigation" aria-label="{{ labels.primary_navigation }}">
       {% for item in navigation %}
         {% assign current_url = page.url | remove: '.html' | remove_last: '/' %}
         <a class="site-nav__link{% if current_url == item.url %} is-active{% endif %}"

@@ -2,6 +2,8 @@
 layout: home_zh
 lang: zh
 title: "首页"
+description: "陆盈斐是一名研究英语与西班牙语形态学、新词研究和词典学的博士研究者。"
+translation_url: "/"
 hero_lead: "你好，我是盈斐；在西班牙语语境中也使用 Estefanía 这个名字。我是一名博士研究者，关注英语与西班牙语中新词如何形成。"
 hero_affiliation: "巴塞罗那庞培法布拉大学翻译与语言科学系博士前研究员。"
 ---

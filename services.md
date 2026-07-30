@@ -1,6 +1,8 @@
 ---
 layout: page
 title: "Services"
+description: "Language and academic support in linguistics, research communication, tutoring, and liaison interpreting."
+translation_url: "/zh/services.html"
 kicker: "Language & academic support"
 ---
 

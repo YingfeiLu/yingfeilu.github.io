@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Book chapter published: Neology in English and Spanish. 2005–2015. Lexicological Characteristics and Lexicographic Representation"
+translation_url: "/zh/2026/07/21/Book-chapter-published-Neology-in-English-and-Spanish.html"
 ---
 
 I am delighted to share that my book chapter, *Neology in English and Spanish. 2005–2015. Lexicological Characteristics and Lexicographic Representation*, has now been published.

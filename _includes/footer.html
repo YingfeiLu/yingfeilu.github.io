@@ -1,14 +1,17 @@
 <footer class="site-footer">
-  {% assign is_zh = page.lang == 'zh' %}
+  {% assign locale = page.lang | default: site.lang %}
+  {% assign labels = site.data.i18n[locale] %}
+  {% assign is_zh = false %}
+  {% if locale == 'zh' %}{% assign is_zh = true %}{% endif %}
   {% if is_zh %}{% assign footer_home_url = '/zh/' %}{% else %}{% assign footer_home_url = '/' %}{% endif %}
   <div class="site-footer__identity">
     <a href="{{ footer_home_url | relative_url }}" class="site-footer__name">{{ site.title }} <span class="chinese-text" lang="zh">{{ site.chintitle }}</span></a>
     <p>{% if is_zh %}{{ site.description_zh }}{% else %}{{ site.description }}{% endif %}</p>
   </div>
   <div class="site-footer__meta">
-    <div class="social-links" aria-label="Social profiles">
+    <div class="social-links" aria-label="{{ labels.social_profiles }}">
       {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" aria-label="{{ item.icon | replace: '-', ' ' | capitalize }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a>
+        <a href="{{ item.link }}" aria-label="{{ item.label }}" target="_blank" rel="noopener noreferrer">{% include social-icon.html icon=item.icon %}</a>
       {% endfor %}
     </div>
     <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>

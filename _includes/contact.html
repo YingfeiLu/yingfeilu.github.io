@@ -1,30 +1,40 @@
+{% assign locale = page.lang | default: site.lang %}
+{% assign labels = site.data.i18n[locale] %}
 {% for contact in site.data.settings.contacts %}
 <article class="contact-card">
   <div class="contact-card__details">
-    <p class="eyebrow">Contact details</p>
+    <p class="eyebrow">{{ labels.contact_details }}</p>
     <h2>{{ contact.name }}</h2>
-    <p class="contact-card__role">{{ contact.position }} · {{ contact.department | strip }}</p>
+    <p class="contact-card__role">{% if locale == 'zh' %}博士前研究员 · 翻译与语言科学系{% else %}{{ contact.position }} · {{ contact.department | strip }}{% endif %}</p>
     <dl class="contact-list">
       <div>
-        <dt>Institution</dt>
+        <dt>{{ labels.institution }}</dt>
         <dd>{{ contact.institution }}</dd>
       </div>
       <div>
-        <dt>Address</dt>
+        <dt>{{ labels.address }}</dt>
         <dd>{{ contact.institution_address }}</dd>
       </div>
       <div>
-        <dt>Email</dt>
+        <dt>{{ labels.email }}</dt>
         <dd><a class="contact-card__email" href="mailto:{{ contact.email }}">{{ contact.email }}</a></dd>
       </div>
       <div>
-        <dt>Office</dt>
+        <dt>{{ labels.office }}</dt>
         <dd>{{ contact.office }}</dd>
       </div>
     </dl>
   </div>
   <div class="contact-card__image">
-    <img src="{{ '/' | append: contact.image | relative_url }}" alt="Portrait of {{ contact.name }}" width="1279" height="1706">
+    <img
+      src="{{ '/assets/img/contact-640.jpg' | relative_url }}"
+      srcset="{{ '/assets/img/contact-640.jpg' | relative_url }} 640w, {{ '/assets/img/contact-1200.jpg' | relative_url }} 1200w"
+      sizes="(max-width: 900px) calc(100vw - 2rem), 412px"
+      alt="{% if locale == 'zh' %}{{ contact.name }}肖像{% else %}Portrait of {{ contact.name }}{% endif %}"
+      width="1279"
+      height="1706"
+      loading="lazy"
+      decoding="async">
   </div>
 </article>
 {% endfor %}

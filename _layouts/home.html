@@ -14,7 +14,14 @@ layout: default
     </div>
   </div>
   <div class="home-hero__portrait">
-    <img src="{{ '/assets/img/home.jpg' | relative_url }}" alt="Portrait of Yingfei Lu" width="1536" height="2048" fetchpriority="high">
+    <img
+      src="{{ '/assets/img/home-640.jpg' | relative_url }}"
+      srcset="{{ '/assets/img/home-640.jpg' | relative_url }} 640w, {{ '/assets/img/home-960.jpg' | relative_url }} 960w"
+      sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1180px) 36vw, 432px"
+      alt="Portrait of Yingfei Lu"
+      width="1536"
+      height="2048"
+      fetchpriority="high">
   </div>
 </section>
 
