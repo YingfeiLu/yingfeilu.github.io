@@ -497,6 +497,8 @@ html[lang="zh"] .site-nav__link {
 }
 
 .service-selector {
+  width: var(--content-width);
+  max-width: calc(100vw - 3rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
@@ -1258,6 +1260,10 @@ html[lang="zh"] .timeline__content .activity-title {
 }
 
 @media (max-width: 900px) {
+  .service-selector {
+    max-width: calc(100vw - 2rem);
+  }
+
   .site-header__inner,
   .site-main,
   .site-footer {
